@@ -115,7 +115,7 @@ $(document).ready(function() {
       }
       output += "<div class='section " + slides[i].color + "'>";
       output += "<div class='section-header'>";
-      output += "<h2>This is the header</h2>";
+      output += "<h2>Hotel Survey</h2>";
       output += "</div>"; // .section-header
       output += "<div class='question'>";
       output += "<div class='question-number clearfix'>";
@@ -151,13 +151,17 @@ $(document).ready(function() {
         output += "<input id='radios" + i + "' name='radios" + i + "' type='radio' value='5' data-dimension-name='" + slides[i].dimensionName + "' data-dimension='" + slides[i].dimension + "'> Very satisfied";
         output += "</label>";
         output += "<div class='test-submit clearfix'>";
-        output += "<a data-slide='prev' href='#feedbackTest'>&lt; Previous question</a>";
+        output += "<a data-slide='prev' href='#feedbackTest'>&lt; Previous question</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a data-slide='next' href='#feedbackTest'>Next question &gt;</a>";
         output += "</div>"; // .test-submit
         output += "</div>"; // .radio-button-group
       }
       if (slides[i].result === true) {
         output += "<div class='results'></div>";
+		output += "<a data-slide='prev' href='#feedbackTest'>&lt; Previous question</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a data-slide='next' href='form.html'>Retake Survey &gt;</a>";
+       
       }
+	  
+	  
       if (slides[i].button === true) {
         output += "<div class='clearfix'><button href='#feedbackTest' class='btn center-block' data-slide='next'>" + slides[i].buttonText + "</button></div>";
       }
